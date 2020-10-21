@@ -1,23 +1,25 @@
 pipeline {
     agent any
+    tools
+    {
+            maven 'mvnhome'
+    }
 
     stages {
-        stage('GitRepoFetch')
-        {
-            steps
-            {
-                 git 'https://github.com/fkhangitazlogin/VSpringDemo.git'
-            }
+        //stage('GitRepoFetch')
+        //{
+            //steps
+            //{
+                 //git 'https://github.com/fkhangitazlogin/VSpringDemo.git'
+            //}
 
-        }
+        //}
         stage('MvnProjectBuild')
         {
             steps
             {
-                withMaven
-                {
-                    sh "mvn clean install"
-                }
+                sh "mvn --version"
+                sh "mvn clean install"
             }
         }
     }
