@@ -2,6 +2,7 @@ pipeline {
     agent any
     tools
     {
+            jdk "javahome"
             maven 'mvnhome'
     }
 
@@ -18,6 +19,7 @@ pipeline {
         {
             steps
             {
+                sh "java --version"
                 sh "mvn --version"
                 sh "mvn clean install"
             }
