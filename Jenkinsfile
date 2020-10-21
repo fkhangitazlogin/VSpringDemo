@@ -14,7 +14,10 @@ pipeline {
         {
             steps
             {
-                sh "mvn clean install"
+                withMaven
+                {
+                    sh "mvn clean install"
+                }
             }
         }
     }
