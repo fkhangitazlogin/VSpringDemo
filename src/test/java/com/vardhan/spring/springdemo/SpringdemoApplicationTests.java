@@ -10,4 +10,9 @@ class SpringdemoApplicationTests {
 	void contextLoads() {
 	}
 
+	@Test
+	String greetingtest(){
+		Assert.assertEquals(Hello.greetings(),"Greetings from Spring Boot!")
+	}
+
 }
