@@ -28,13 +28,13 @@ pipeline {
 
             success 
             {
-                mail to: nalamalavardhan@gmail.com, subject: 'The Pipeline Passed :)'
-                body: " Get Deatils from this BuildURL: ${BUILD_URL}"
+                mail to: 'nalamalavardhan@gmail.com', subject: 'The Pipeline Passed :)'
+                body: "Get Deatils from this BuildURL: ${BUILD_URL}"
             }
 
             failure 
             {
-                mail to: nalamalavardhan@gmail.com, subject: 'The Pipeline failed :('
+                mail to: 'nalamalavardhan@gmail.com', subject: 'The Pipeline failed :('
                 body: " For error logs Check this BuildURL: ${BUILD_URL}"
             }
             
